@@ -5,7 +5,7 @@ import re
 hora_actual = datetime.datetime.now()
 ult_hora = hora_actual - datetime.timedelta(hours=1)
 ult_hora = ult_hora.replace(minute=0, second=0, microsecond=0)
-ini_hora = ult_hora.replace(hour=ult_hora.hour - 1) if ult_hora >=1 else ult_hora.replace(hour=23)
+ini_hora = ult_hora.replace(hour=ult_hora.hour - 1) if ult_hora.hour >=1 else ult_hora.replace(hour=23)
 fin_hora = ult_hora
 inicial = ini_hora.strftime('%H:%M:%S')
 final = fin_hora.strftime('%H:%M:%S')
